@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Quiz</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>Code Quiz</h1>
+  </header>
+  <main>
+    <section id="start-screen">
+      <h2>Time for the Quiz!</h2>
+      <button id="start-btn">Start</button>
+    </section>
+    <section id="quiz-screen" class="hidden">
+      <h2>Question <span id="question-number">1</span></h2>
+      <p id="question"></p>
+      <ul id="choices">
+        <li><button class="choice-btn" data-answer="false">Hypertext Makeup Language</button></li>
+        <li><button class="choice-btn" data-answer="false">Hypertext Markdown Language</button></li>
+        <li><button class="choice-btn" data-answer="true">Hypertext Markup Language</button></li>
+        <li><button class="choice-btn" data-answer="false">Hypertext Model Language</button></li>
+      </ul>
+      <div id="feedback"></div>
+      <div id="timer">Time Remaining: <span id="time-left"></span></div>
+    </section>
+    <section id="end-screen" class="hidden">
+      <h2>Finished!</h2>
+      <p>Your score is <span id="final-score"></span></p>
+      <form>
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" name="initials" maxlength="3" required>
+        <button type="submit" id="submit-btn">Submit</button>
+      </form>
+    </section>
+  </main>
+  <script src="assets\questions.js"></script>
+</body>
+</html>
